@@ -1,0 +1,177 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.big-image{
+    background: linear-gradient(to bottom,rgba(0,0,0,1), rgba(0,0,0,0.75)), url(/images/worker5.jpg) center/cover;
+    background-attachment: fixed;
+    height:70vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2em;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.bars{
+    color:red;
+    position:fixed;
+    top: 100px;
+    left:30px;
+}
+.bars a{
+    color:grey;
+    display:flex;
+    flex-direction:columns;
+}
+.bars:hover{
+    cursor:pointer
+}
+.divbars{
+    border:none;
+    width:clamp(100px, 15cqi, 140px);
+    transform: scale(0);
+    visibility:hidden;
+    transition:all .8s linear;
+    opacity:0.8;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition:all .8s linear;
+    margin-top: 20px;
+    overflow: none;
+    container-type:inline-size;  
+}
+.divbars a{
+    text-align:left;
+    text-transform:capitalize;
+    text-decoration: none;
+    text-indent: clamp(10px, 15cqi, 20px);
+    
+    font-weight: normal;
+    transition:all .8s linear;
+    font-size: clamp(1px, 13cqi, 1rem);
+    padding:clamp(0px, 8cqi, 15px) 0px;
+    
+}
+.divbars a:hover {
+    background-color:rgb(180, 178, 178);
+    width:100%;
+    text-indent: 1.5em;
+    transition:all .4s linear;
+    color:black;
+    transition:all .8s linear;
+    
+    
+}
+.inp:checked + label .divbars{
+    visibility: visible;
+    background-color: lightgray;
+    transform: scale(1);
+    transition:all .8s linear;
+}
+input{
+    visibility: hidden;
+}
+.big-image h1{
+    color:grey;
+    text-transform: capitalize;
+    border-left:2px solid white;
+    padding-left:10px;
+
+}
+section{
+    text-align: center;
+}
+button{
+
+    margin:5cqi;
+    padding:20px clamp(0px, 3cqi, 40px);
+    border-radius: 10px;
+    border:none;
+    background-color: rgb(17, 233, 17);
+    box-shadow: 4px 4px 8px black;
+    cursor:pointer;
+    font-weight: 900;
+    text-transform: capitalize;
+    transition:transform .5s linear;
+    /* font-size:15px; */
+}
+em{
+    color:red;
+}
+button:hover{
+    filter:brightness(.8);
+    transform:scale(1.1);
+    transition:transform .5s linear;
+}
+p{
+    margin:20px;
+    font-weight: bold;
+    border-left: 2px solid red;
+    text-align: center;
+    text-transform: capitalize;
+    overflow: hidden;
+    
+}
+.images{
+    text-align: center;
+    justify-content: center;
+    display:flex;
+    flex-wrap:wrap;
+    gap:.5em;
+    /* visibility: hidden; */
+}
+img{
+    width:400px;
+    height:300px;
+    cursor:pointer;
+}
+.section{
+    position: relative;
+    overflow:hidden;
+}
+.card{
+    background-color: rgba(27, 27, 27, 0.5);
+    width:400px;
+    box-sizing:border-box;
+    padding:6px;
+    position:absolute;
+    transition:opacity .4s linear;
+    bottom:0px;
+    opacity:0;
+    color:white;
+}
+.card:hover{
+    opacity:1;
+}
+.active{
+    transform:translate(-50%, -50% );
+    top:50%;
+    left:50%;
+    position:fixed;
+    width:70%;
+    background-color: black;
+    /* height:50vh; */
+    visibility:visible;
+    background-color: red;
+    /* transform:scale(2); */
+    /* border-radius: 20px; */
+    z-index:1;
+    opacity:1;
+    /* filter:blur(0px); */
+}
+.active1{
+    /* visibility: hidden; */
+    
+}
+body{
+    /* background-color: black; */
+}
+i{
+    position:fixed;
+    top:0px;
+    right:0px;
+    cursor:pointer;
+}

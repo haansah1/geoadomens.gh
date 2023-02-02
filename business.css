@@ -1,0 +1,156 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.body .header{
+    width:100vw;
+    background-color: grey;
+    box-shadow:8px 8px 16px black;
+    text-align: center;
+    position:fixed;
+    padding:20px 0px;
+    text-transform: capitalize;
+    color:white;
+    /* text-decoration:underline; */
+    /* border-bottom: 2px solid red; */
+    
+    
+}
+.whole{
+    padding:20px;
+    /* background:  linear-gradient(to bottom,rgba(0,0,0,1), rgba(0,0,0,0.75)), url(/images/Untitled\ design.jpg) center/cover ; */
+    /* background:  url(/images/Untitled\ design.jpg) center/cover ; */
+    background-attachment: fixed;
+    display:grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr;
+    grid-gap:1em;
+    color:white;
+    
+    
+}
+
+.whole div img{
+    width:clamp(0px, 40cqi, 350px);
+    transition:all 1s linear;
+    cursor:pointer;
+    
+
+}
+p{
+    background-color: grey;
+    padding:20px;
+    overflow: hidden;
+    box-shadow:4px 4px 8px black;
+    transition-property: opacity, transform, display;
+    transition-duration: .4s;
+    transition-timing-function: linear;
+    
+}
+.whole div{
+    display:flex;
+    margin-top:80px
+    
+}
+.whole div img:hover{
+    transform: translateX(50px) scale(1.2) rotatez(6deg);
+    transition:all 1s linear;
+}
+.one img{
+    height:clamp(129px, 40cqi, 350px);
+    /* position:relative; */
+}
+.two img{
+    height:clamp(129px, 30cqi, 257px);
+}
+.three img{
+    /* width:clamp(0px, 35cqi, 30px); */
+    /* height:clamp(222px, 50cqi, 517px); */
+}
+
+
+.bars{
+    color:red;
+    position:fixed;
+    top: 30px;
+    left:30px;
+}
+.bars a{
+    color:grey;
+    display:flex;
+    flex-direction:columns;
+}
+.bars:hover{
+    cursor:pointer
+}
+.divbars{
+    border:none;
+    width:clamp(100px, 15cqi, 140px);
+    transform: scale(0);
+    visibility:hidden;
+    transition:all .8s linear;
+    opacity:0.8;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition:all .8s linear;
+    margin-top: 20px;
+    overflow: none;
+    container-type:inline-size;  
+}
+.divbars a{
+    text-align:left;
+    text-transform:capitalize;
+    text-decoration: none;
+    text-indent: clamp(10px, 15cqi, 20px);
+    
+    font-weight: normal;
+    transition:all .8s linear;
+    font-size: clamp(1px, 13cqi, 1rem);
+    padding:clamp(0px, 8cqi, 15px) 0px;
+    
+}
+.divbars a:hover {
+    background-color:rgb(180, 178, 178);
+    width:100%;
+    text-indent: 1.5em;
+    transition:all .4s linear;
+    color:black;
+    transition:all .8s linear;
+    
+    
+}
+.inp:checked + label .divbars{
+    visibility: visible;
+    background-color: lightgray;
+    transform: scale(1);
+    transition:all .8s linear;
+}
+input{
+    visibility: hidden;
+}
+
+@media (max-width:768px){
+    .whole div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    p{
+        width:80vw;
+    }
+    .whole{
+        /* width:100vw;
+        height:100vh;
+        text-align: center;
+        justify-content: center;
+        align-items: center; */
+    }
+}
+@media (min-width:768px){
+    p{
+        max-width:40vw;
+    }
+}
